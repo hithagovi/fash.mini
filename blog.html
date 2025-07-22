@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Posts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .blog-post {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post img {
+      width: 100%;
+      height: auto;
+    }
+
+    .content {
+      padding: 15px;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .category {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      margin-right: 5px;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="blog-post">
+      <img src="https://via.placeholder.com/1200x600" alt="Sample Blog Image">
+      <div class="content">
+        <div class="title">Sample Blog Post Title</div>
+        <div class="meta">
+          <span class="category">Tech</span>
+          <span class="date">December 11, 2024</span>
+        </div>
+        <div class="description">
+          This is a brief description of the blog post. It provides a quick overview of the content and entices the reader to learn more.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const posts = [
+      {
+        title: "First Blog Post",
+        date: "December 1, 2024",
+        category: "Travel",
+        description: "Discover the most beautiful destinations around the world.",
+        imageUrl: "https://via.placeholder.com/1200x600"
+      },
+      {
+        title: "Second Blog Post",
+        date: "December 5, 2024",
+        category: "Food",
+        description: "Explore delicious recipes and food adventures.",
+        imageUrl: "https://via.placeholder.com/1200x600"
+      },
+      {
+        title: "Third Blog Post",
+        date: "December 10, 2024",
+        category: "Tech",
+        description: "Stay updated with the latest tech trends and innovations.",
+        imageUrl: "https://via.placeholder.com/1200x600"
+      }
+    ];
+
+    const container = document.querySelector('.container');
+
+    posts.forEach(post => {
+      const blogPost = document.createElement('div');
+      blogPost.className = 'blog-post';
+
+      blogPost.innerHTML = `
+        <img src="${post.imageUrl}" alt="${post.title}">
+        <div class="content">
+          <div class="title">${post.title}</div>
+          <div class="meta">
+            <span class="category">${post.category}</span>
+            <span class="date">${post.date}</span>
+          </div>
+          <div class="description">${post.description}</div>
+        </div>
+      `;
+
+      container.appendChild(blogPost);
+    });
+  </script>
+</body>
+</html>
