@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .editor-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .toolbar {
+            margin-bottom: 10px;
+            display: flex;
+            gap: 5px;
+        }
+        .toolbar button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        .toolbar button:hover {
+            background-color: #e9e9e9;
+        }
+        .editor {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Editor</h1>
+    <div class="editor-container">
+        <div class="toolbar">
+            <button onclick="formatText('bold')">Bold</button>
+            <button onclick="formatText('italic')">Italic</button>
+            <button onclick="formatText('underline')">Underline</button>
+            <button onclick="formatText('strikeThrough')">Strikethrough</button>
+            <button onclick="formatText('insertOrderedList')">Ordered List</button>
+            <button onclick="formatText('insertUnorderedList')">Unordered List</button>
+        </div>
+        <div class="editor" contenteditable="true">
+            Start typing here...
+        </div>
+    </div><div class="editor-container">
+        <div class="toolbar">
+            <button onclick="formatText('bold')">Bold</button>
+            <button onclick="formatText('italic')">Italic</button>
+            <button onclick="formatText('underline')">Underline</button>
+            <button onclick="formatText('strikeThrough')">Strikethrough</button>
+            <button onclick="formatText('insertOrderedList')">Ordered List</button>
+            <button onclick="formatText('insertUnorderedList')">Unordered List</button>
+        </div>
+        <div class="editor" contenteditable="true">
+            Start typing here...
+        </div>
+    </div>
+
+    <script>
+        function formatText(command) {
+            document.execCommand(command, false, null);
+        }
+    </script>
+</body>
+</html>

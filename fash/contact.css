@@ -1,0 +1,144 @@
+/* CONTACT */
+
+body{
+    
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: ui-monospace;
+}
+header{
+
+.content a{
+    color: #0e0909;
+    float: right;
+    text-align: center;
+    padding: 18px 14px;
+    font-size: 18px;
+    width: 100px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.a:hover{
+    background-color: burlywood;
+    color: #050404;
+}
+
+
+
+
+.content-links a {
+    text-decoration: none;
+    color: #0e0909;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #8f645a;
+}
+
+a {
+    text-decoration: none;
+    color: #00060b;
+}
+
+a:hover {
+    color: #e8edf0;
+    padding: 18px 14px;
+    font-size: 18px;
+    width: 100px;
+    font-weight: bold;
+}
+}
+header {
+    background-color:#c7a585;
+    padding: 20px;
+    text-align: center;
+}
+
+.content a{
+    color: #0e0909;
+    float: right;
+    text-align: center;
+    padding: 18px 14px;
+    font-size: 18px;
+    width: 100px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    header nav {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+    header nav {
+        padding: 10px;
+    }
+}
+
+

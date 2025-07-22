@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write</title>
+  <link rel="stylesheet" href="write.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      background-color:#c7a585;
+    }
+    header{
+        
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color:#8d703d ;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #8d703d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Create a Post</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" placeholder="Enter the title" required>
+    
+    <label for="cat">Category</label>
+    <select id="cat" name="cat" required>
+      <option value="">Select a category</option>
+      <option value="apparel">Apparel</option>
+      <option value="footwear">Footwear</option>
+      <option value="accessories">Accessories</option>
+      <option value="makeup">Makeup</option>
+      <option value="celeb">Celebrity Inspos</option>  
+          <!-- Add more categories as needed -->
+    </select>
+    <label for="desc">Description</label>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+      .editor-container {
+          border: 1px solid #ccc;
+          padding: 5px;
+          border-radius: 5px;
+      }
+      .toolbar {
+          margin-bottom: 10px;
+          display: flex;
+          gap: 5px;
+      }
+      .toolbar button {
+          padding: 5px 10px;
+          border: 1px solid #ccc;
+          background-color: #b95d16c3;
+          cursor: pointer;
+      }
+      .toolbar button:hover {
+          background-color: #e9e9e9;
+      }
+      .editor {
+          border: 1px solid #ccc;
+          padding: 10px;
+          min-height: 200px;
+          outline: none;
+      }
+  </style>
+</head>
+<body>
+
+  <div class="editor-container">
+      <div class="toolbar">
+          <button onclick="formatText('bold')">Bold</button>
+          <button onclick="formatText('italic')">Italic</button>
+          <button onclick="formatText('underline')">Underline</button>
+          <button onclick="formatText('strikeThrough')">Strikethrough</button>
+          <button onclick="formatText('insertOrderedList')">Ordered List</button>
+          <button onclick="formatText('insertUnorderedList')">Unordered List</button>
+      </div>
+      <div class="editor" contenteditable="true">
+         
+      </div>
+  </div>
+ 
+      
+    
+    <script>
+      function formatText(command) {
+          document.execCommand(command, false, null);
+      }
+  </script>
+
+    
+    <label for="file">Upload File</label>
+    <input type="file" id="file" name="file" accept="image/*">
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
